@@ -7,7 +7,7 @@
 :root {
   font-size: 62.5%;
 
-  --ff-primary: 'Poppins', sans-serif;
+  --ff-primary: 'roboto', sans-serif;
   --text-color: #ffffff;
   --bb-color: #000;
 
@@ -39,8 +39,8 @@ body * {
 
 #app {
   padding: 2rem;
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 13rem 16rem 16rem 16rem ; 
 }
 
 header {
@@ -48,7 +48,8 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  margin: 2.5rem 0;
+  margin-bottom: 8.725rem;
+
 }
 
 header  {
@@ -64,10 +65,19 @@ header  {
 }
 
 .search input {
-  height: 3.2rem;
-  border: 1px solid #ccc;
-  border-radius: .4rem ;
-  padding: 0 .8rem;
+  width: 43rem;
+  height: 1.6rem;
+  border-radius: .5rem ;
+  padding: 1.6rem;
+  background: #06181C;
+  border: 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+
+  color:#fff
 }
 
 .search button {
@@ -75,6 +85,7 @@ header  {
   border-radius: .4rem;
   height: 3.2rem;
   border: none;
+  margin: .5rem;
 
   display: flex;
   padding: 1.2rem 3.2rem;
@@ -82,18 +93,39 @@ header  {
   align-items: center;
   gap: .8rem;
 
-
+  color:  #FFF;
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.4rem; /* 171.429% */
+  text-transform: uppercase;
 
   cursor: pointer;
+
+}
+.search button img {
+  height: 2.4rem;
+  width: 2.4rem;
+
+}
+.search button img:hover {
+  background: #fff;
+
+
 }
 
 .search button:hover {
-  filter: brightness(1.1)
+  background: #fff;
+  color: #065e7c;
+  
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  border: 1px solid #065e7c;
+ 
 
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
 }
@@ -101,6 +133,7 @@ table {
 table * {
   font-size: 1.4rem;
   color: var(--text-color);
+
 }
 
 table th {
@@ -157,6 +190,7 @@ td.user a p {
 td .remove {
   background: none;
   border: none;
+  font-weight: 600;
 
   color: red;
 
