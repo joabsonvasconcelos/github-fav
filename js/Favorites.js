@@ -129,6 +129,7 @@ export class FavoritesView extends Favorites {
   }
 }
 
+
 function checkFilledTable() {
   let table = document.getElementById("table");
   let noFavorites = document.getElementById("no-favorites");
