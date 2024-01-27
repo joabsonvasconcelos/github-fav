@@ -10,10 +10,15 @@
 
   --ff-primary: 'roboto', sans-serif;
   --text-color: #ffffff;
+  --text-color-remove: #aa0909;
   --bb-color: #000;
+  --bb-color-1:#065e7c;
+  --bb-color-2:#4A808C;
+  --bb-color-table-tr-e:#0d3b46;
+  --bb-color-table-tr-o:#061618 - 50%;
+  --bb-color-imput:#06181C;
 
-  --hue: 194;
-  --primary-color: hsl(var(--hue), 72%, 13%);
+  
 }
 
 body {
@@ -73,14 +78,14 @@ header {
   height: 1.6rem;
   border-radius: .5rem ;
   padding: 1.6rem;
-  background: #06181C;
+  background: var(--bb-color-imput);
   border: 1px;
 
-  color:#fff
+  color: var(--text-color)
 }
 
 .search button {
-  background-color: #065e7c;
+  background-color: var(--bb-color-1);
   border-radius: .4rem;
   height: 3.2rem;
   border: none;
@@ -92,7 +97,7 @@ header {
   align-items: center;
   gap: .8rem;
 
-  color:  #FFF;
+  color:  var(--text-color);
   text-align: center;
   font-size: 1.4rem;
   font-style: normal;
@@ -121,8 +126,8 @@ button:hover .img{
 }
 
 .search button:hover {
-  background: #fff;
-  color: #065e7c;
+  background:var(--text-color);
+  color: var(--bb-color-1);
   
 }
 
@@ -131,7 +136,7 @@ button:hover .img{
   min-width: none;
   overflow-y: scroll;
   border-radius: 12px;
-  border: 1px solid #4A808C;
+  border: 1px solid var(--bb-color-2);
   
 }
 .table-wrapper::-webkit-scrollbar {
@@ -142,12 +147,12 @@ button:hover .img{
 }
 
 .table-wrapper::-webkit-scrollbar-thumb {
-  background-color:#4A808C;
+  background-color:var(--bb-color-2);
   border-radius: 10px;
 }
 
 .table-wrapper {
-  scrollbar-color:#4A808C transparent;
+  scrollbar-color:var(--bb-color-2);
 }
 
 
@@ -174,7 +179,7 @@ table * {
 }
 
 table th {
-  background: var(--primary-color);
+  background: var(--bb-color-table-tr-e);
   text-align: left;
   font-weight: normal;
   padding: 2.4rem 2.4rem 2.4rem 4rem;
@@ -195,11 +200,11 @@ table th:last-child {
 }
 
 table tr:nth-child(even) {
-  background: #0d3b46;;
+  background: var(--bb-color-table-tr-e);
 }
 
 table tr:nth-child(odd) {
-  background: #061618 - 50%;
+  background: var(--bb-color-table-tr-o);
 }
 
 table td {
@@ -236,7 +241,7 @@ td .remove {
   border: none;
   font-weight: 600;
 
-  color: red;
+  color: var(--text-color-remove);
 
   cursor: pointer;
 }
@@ -247,7 +252,7 @@ td .remove {
   align-items: center;
   height: 300px;
   margin: 0 auto;
-  max-width: 600px
+    max-width: 600px
   
 
 
