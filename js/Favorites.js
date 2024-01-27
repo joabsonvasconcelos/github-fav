@@ -128,3 +128,22 @@ export class FavoritesView extends Favorites {
       })  
   }
 }
+
+function checkFilledTable() {
+  let table = document.getElementById("table");
+  let noFavorites = document.getElementById("no-favorites");
+
+  if (table.rows.length > 1) {
+    noFavorites.style.display = "none";
+  } else {
+    noFavorites.style.display = "flex";
+  }
+}
+
+window.onload = function () {
+  checkFilledTable(); 
+
+  let table = document.getElementById("table");
+
+  table.addEventListener("DOMSubtreeModified", checkFilledTable);
+}
